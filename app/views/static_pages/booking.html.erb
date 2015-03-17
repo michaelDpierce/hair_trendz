@@ -1,0 +1,54 @@
+<title>Bookings / Hair Trendz</title>
+<div class='container'>
+  <p>"May all who enter as guests leave as friends" -Cindy, Owner</p>
+  <hr>
+  <br>
+
+  <h4>MAKE AN APPOINTMENT</h4>
+  <p>
+    We are excited to be of service to you and hope that your first experience
+    at Hair trenz brings you back again and again! We invite you to schedule an
+    appointment or feel free to just come on in; Walk-ins are always welcome.
+    Schedule your service today by calling 720 466-8429 or use the online
+    request below.
+  </p>
+  <p>
+    We understand that life happens and you may be late or need to reschedule.
+    Please give us a call so we can fill that time slot or adjust our schedule
+    to ensure that you, and following guests can receive the full experience.
+    We thank you for you understanding.
+  </p>
+
+  <br>
+
+  <h4>APPOINTMENT REQUEST</h4>
+  <p>
+    Please note that this is a request only and not a confirmation.
+    We suggest making your request at least 24 hours in advance of
+    your ideal appointment time. After your request has been sent,
+    you should receive a text to confirm your appointment. Thank You!
+  </p>
+  <br>
+  <div class='container'>
+    <%= bootstrap_form_tag url: '/subscribe' do |f| %>
+      <label>First Name*</label>
+      <%= f.text_field :first_name, placeholder: 'First Name *', hide_label: true %>
+      <label>Last Name*</label>
+      <%= f.text_field :last_name, placeholder: 'Last Name *', hide_label: true %>
+      <label>Cell*</label>
+      <%= f.text_field :cell, placeholder: 'Cell*', hide_label: true %>
+      <label>Date Requested* (must be 24 hours in advance)</label>
+      <%= f.date_select :date_requested, placeholder: 'Date Requested*', hide_label: true %>
+      <label>Time Requested*</label>
+      <%= f.text_field :time_requested, placeholder: 'Time Requested, example: 10AM*', hide_label: true %>
+      <%= f.select :stylist, [['Cindy'], ['Martha'], ['Either']], { label: 'Stylist' }, { class: 'selectpicker' } %>
+      <%= f.select :service, [['Cut'], ['Color'], ['Highlight'], ['Style'], ['Perm'], ['Waxing']], { label: 'Service' }, { class: 'selectpicker' } %>
+      <%= f.primary 'SUBMIT REQUEST' %>
+    <% end %>
+  </div>
+  <br><br>
+  <p>
+    Note: Please contact us if you do not receive a text prior to your requested
+    appointment date. Thank You!
+  </p>
+</div>

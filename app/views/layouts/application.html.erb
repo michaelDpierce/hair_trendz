@@ -1,33 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HairTrendz</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'></script>
 </head>
 <body>
-  <nav>
-    <ul class="pagination">
-      <li>
-        <a href="#" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
+  <br><br><br><br>
+  <nav class='navbar navbar-default navbar-fixed-top'>
+    <div class='container-fluid container'>
+      <div class='navbar-header'>
+        <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1'>
+          <span class='sr-only'>Toggle navigation</span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+        </button>
+        <a class='navbar-brand' href='/index'>
+          <h2 style='position:relative; bottom:26px; color:black;'>
+            Ha<span style='position:relative; top:5px; color:#7D9D22;'>ᴉ</span>r trenz
+          </h2>
         </a>
-      </li>
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li>
-        <a href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
-      </li>
-    </ul>
+      </div>
+      <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+        <ul class='nav navbar-nav navbar-right'>
+          <li><a href='/services'>Services</a></li>
+          <li><a href='/booking'>Booking</a></li>
+          <li><a href='/location'>Location</a></li>
+          <li><a href='/highlights'>Highlights</a></li>
+          <li><a href='/about'>About</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-
-<%= yield %>
-
+  <%= yield %>
+  <center>
+    <div class='row footer-one'>
+      <br>
+      <div class='col-md-4'>
+        <h4 class='grey-text'>Hours</h4>
+        <div>
+          <strong class='grey-text'>Tuesday-Friday:10AM-6PM</strong><br>
+          <strong class='grey-text'>Saturday:10AM-5PM</strong><br>
+          <strong class='grey-text'>Sunday:Closed</strong>
+        </div>
+      </div>
+      <div class='col-md-4'>
+        <h4 class='grey-text'>Contact</h4>
+        <a href='tel:+7204668429' class='light-grey-text'>720.466.8429</a><br>
+        <a href='mailto:example@email.com' class='light-grey-text'>example@email.com</a><br>
+        <p class='light-grey-text'>
+          Find us on Facebook:
+          <a href='https://www.facebook.com/pages/Hair-trenz-Frederick/1392575727662488?sk=timeline'
+             class='light-grey-text'><i class='fa fa-facebook fa-lg'></i>
+          </a>
+        </p>
+      </div>
+      <div class='col-md-4'>
+        <h4 class='grey-text'>Find Us</h4>
+        <img src='map.png' alt='Hair trendz map' height='200' width='300'>
+        <p class='light-grey-text'>234 5th St, Frederick, Colorado</p>
+      </div>
+    </div>
+  </center>
+  <div class='footer-two'>
+    <div class='container'>
+      <br>
+      <p class='pull-left'><i class='fa fa-copyright fa-lg'></i> 2015 in good company! LLC</p>
+      <p class='pull-right'>
+        Design By
+        <a href='http://www.affektive.com'>
+          Affektive Software LLC
+        </a>
+         </p>
+    </div>
+  </div>
 </body>
 </html>
+
+<style>
+.footer-one {
+  background-color: #E0E0E0;
+}
+
+.footer-two {
+  background-color: #424242;
+  color: white;
+  height: 60px;
+}
+
+.grey-text {
+  color: #616161;
+}
+
+.light-grey-text {
+  color: #757575;
+}
