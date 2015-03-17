@@ -9,3 +9,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem 'bootstrap_form'
+
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
